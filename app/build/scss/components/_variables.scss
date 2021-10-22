@@ -1,0 +1,34 @@
+@use 'sass:math';
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap');
+
+$font-family: 'Raleway', sans-serif;
+
+$font-color-primary: #e7e7eb;
+$font-color-accent: #a09fb1;
+$font-color-darker: #88869d;
+
+$font-weight: (
+  'regular': 500,
+  'medium': 600,
+  'bold': 700,
+);
+
+@function pxToRem($pxValue) {
+  @return math.div($pxValue, 16) * 1rem;
+}
+
+$font-size: (
+  'xxl': pxToRem(144),
+  'xl': pxToRem(64),
+  'l': pxToRem(48),
+  'm': pxToRem(36),
+  'xs': pxToRem(18),
+  's': pxToRem(16),
+);
+
+$background-primary: #1e213a;
+$background-secondary: #100e1d;
+$background-blue: #3c47e9;
+$background-grey: #6e707a;
+$background-tempBtns: #585676;
