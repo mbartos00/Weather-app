@@ -9,11 +9,15 @@
   box-sizing: border-box;
 }
 
-html {
+html,
+button,
+input {
   font-size: 16px;
   font-family: $font-family;
 }
-
+button {
+  cursor: pointer;
+}
 ol,
 ul {
   list-style: none;
@@ -26,6 +30,11 @@ img {
 
 a {
   text-decoration: none;
+}
+body {
+  height: 100vh;
+  max-width: 100%;
+  width: 100%;
 }
 
 //typography

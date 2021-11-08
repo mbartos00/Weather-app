@@ -8,7 +8,61 @@
     <title>Weather App</title>
   </head>
   <body>
-    <div class="main__wrapper"></div>
+    <div class="wrapper">
+      <aside class="main__content">
+        <header class="main__header">
+          <nav class="header__nav">
+            <div class="header__nav--btn-close" aria-label="close-btn">
+              <div class="header__nav--btn-close-line"></div>
+            </div>
+            <div class="header__nav--searchbar-container">
+              <img
+                class="header__nav--searchbar-container-ico"
+                src="./app/public/images/search-ico.png"
+                alt="search"
+              />
+              <input
+                type="text"
+                aria-label="searchbar"
+                placeholder="search location"
+                class="header__nav--searchbar-container--input"
+              />
+              <button class="header__nav--searchbar-container--btn">
+                Search
+              </button>
+            </div>
+            <div class="header__nav--recent-cities">
+              <p class="header__nav--recent-cities-title">Recently Searched</p>
+              <button class="header__nav--recent-cities-city">London</button>
+            </div>
+          </nav>
+          <div class="header__btns">
+            <button class="header__btns--btn-search">Search for places</button>
+            <button class="header__btns--btn-location">
+              <img src="./app/public/images/gps.svg" alt="gps-ico" />
+            </button>
+          </div>
+        </header>
+        <div class="main__informations">
+          <div class="main__informations--image-container">
+            <img src="./app/public/images/Shower.png" alt="shower-ico" />
+          </div>
+          <div class="main__informations--temp-container">
+            <h1 class="main__informations--temp-container-temperature">15<span class="unit">C</span></span></h1>
+            <h3 class="main__informations--temp-container-type">Shower</h3>
+          </div>
+          <div class="main__informations--date">
+            <h4 class="main__informations--date-today">Today</h4>
+            <span class="dot"></span>
+            <h4 class="main__informations--date-current">Fri, 5 Jun</h4>
+          </div>
+          <div class="main__informations--location">
+            <img class="main__informations--location-ico" src="./app/public/images/location.svg" alt="location-ico" />
+            <h4 class="main__informations--location-current">Helsinki</h4>
+          </div>
+        </div>
+      </aside>
+    </div>
     <script src="./app/public/js/index.min.js"></script>
   </body>
 </html>
