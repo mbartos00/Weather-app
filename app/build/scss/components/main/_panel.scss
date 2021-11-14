@@ -1,0 +1,120 @@
+@use '../variables' as *;
+
+.main__content--highlights-panels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-bottom: 1.5rem;
+}
+.highlights__panels--panel {
+  width: 100%;
+  background-color: $background-primary;
+  display: inherit;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  .panel__title {
+    margin-bottom: 1rem;
+  }
+
+  &.wind {
+    .panel__wind--value {
+      margin-bottom: 1.8rem;
+      position: relative;
+      left: -10%;
+      &::after {
+        content: 'km/h';
+        position: absolute;
+        top: calc(50% - 5px);
+        left: 110%;
+        font-weight: map-get($font-weight, regular);
+        font-size: map-get($font-size, m);
+      }
+    }
+    .panel__wind--direction {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      &-ico {
+        display: flex;
+        width: 1.8rem;
+        aspect-ratio: 1;
+        border-radius: 100vh;
+        justify-content: center;
+        align-items: center;
+        transform: rotate(-90deg);
+        background-color: $background-grey;
+        img {
+          width: 0.7rem;
+        }
+      }
+      .panel__wind--direction-direction {
+        font-size: 0.875rem;
+        font-weight: map-get($font-weight, regular);
+      }
+    }
+  }
+  &.humidity {
+    padding: 3rem;
+    .panel__humidity--value {
+      margin-bottom: 1.5rem;
+      position: relative;
+      &::after {
+        content: '%';
+        position: absolute;
+        top: 25%;
+        left: 110%;
+        font-weight: map-get($font-weight, regular);
+        font-size: map-get($font-size, l);
+      }
+    }
+    .panel__humidity--progress {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      &-zero {
+        position: absolute;
+        font-size: 0.9rem;
+        color: $font-color-accent;
+        left: 0;
+        bottom: 140%;
+      }
+      &-bar {
+        width: 100%;
+        height: 0.5rem;
+        background-color: #ffec65;
+        border-radius: 20px;
+        position: relative;
+        &::before {
+          content: '100';
+          right: 0;
+          bottom: 140%;
+          position: absolute;
+          font-size: 0.9rem;
+          color: $font-color-accent;
+        }
+        &::after {
+          content: '%';
+          position: absolute;
+          top: 140%;
+          color: $font-color-accent;
+          right: 0;
+          font-size: 0.9rem;
+        }
+      }
+      &-bar[value]::-webkit-progress-bar {
+        border-radius: 20px;
+        background-color: $font-color-primary;
+      }
+      &-bar[value]::-webkit-progress-value {
+        border-radius: 20px;
+        background-color: #ffec65;
+      }
+    }
+  }
+}

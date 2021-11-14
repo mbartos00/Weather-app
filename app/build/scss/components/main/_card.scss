@@ -1,0 +1,59 @@
+@use '../variables' as *;
+@use 'sass:map';
+.main__content--cards-card {
+  display: inherit;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: $background-primary;
+  padding: 1.125rem 1.4rem;
+
+  .card__title {
+    margin-bottom: 0.675rem;
+  }
+  .card__image {
+    width: 4rem;
+  }
+  .card__temps {
+    display: inherit;
+    flex-direction: row;
+    margin-top: 2rem;
+    margin-right: 1rem;
+    gap: 2rem;
+    &--day {
+      position: relative;
+      .unit {
+        position: absolute;
+        left: 140%;
+        top: 0;
+        font-size: map-get($font-size, s);
+        color: $font-color-primary;
+        font-weight: map.get($font-weight, regular);
+      }
+      ::before {
+        content: '\00B0';
+        position: absolute;
+        right: 100%;
+      }
+    }
+    &--night {
+      position: relative;
+      color: $font-color-darker;
+
+      .unit {
+        position: absolute;
+        left: 140%;
+        top: 0;
+        font-size: map-get($font-size, s);
+        color: $font-color-darker;
+        font-weight: map.get($font-weight, regular);
+      }
+      ::before {
+        content: '\00B0';
+        position: absolute;
+        right: 100%;
+      }
+    }
+  }
+}

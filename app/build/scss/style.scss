@@ -1,16 +1,17 @@
 @use './components/variables';
 @use './components/globals';
-@use './components/aside/index';
+@use './components/aside/aside-index';
+@use './components/main/main-index';
 
 .wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
 
-  @media screen and (max-width: 1024px) {
-    .wrapper {
-      flex-direction: row;
-    }
+@media screen and (min-width: 1024px) {
+  .wrapper {
+    flex-direction: row;
   }
 }

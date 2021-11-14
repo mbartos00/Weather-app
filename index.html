@@ -9,8 +9,8 @@
   </head>
   <body>
     <div class="wrapper">
-      <aside class="main__content">
-        <header class="main__header">
+      <aside class="aside__content">
+        <header class="aside__header">
           <nav class="header__nav">
             <div class="header__nav--btn-close" aria-label="close-btn">
               <div class="header__nav--btn-close-line"></div>
@@ -43,25 +43,135 @@
             </button>
           </div>
         </header>
-        <div class="main__informations">
-          <div class="main__informations--image-container">
+        <div class="aside__informations">
+          <div class="aside__informations--image-container">
             <img src="./app/public/images/Shower.png" alt="shower-ico" />
           </div>
-          <div class="main__informations--temp-container">
-            <h1 class="main__informations--temp-container-temperature">15<span class="unit">C</span></span></h1>
-            <h3 class="main__informations--temp-container-type">Shower</h3>
+          <div class="aside__informations--temp-container">
+            <h1 class="aside__informations--temp-container-temperature">
+              15<span class="unit">C</span>
+            </h1>
+            <h3 class="aside__informations--temp-container-type">Shower</h3>
           </div>
-          <div class="main__informations--date">
-            <h4 class="main__informations--date-today">Today</h4>
+          <div class="aside__informations--date">
+            <h4 class="aside__informations--date-today">Today</h4>
             <span class="dot"></span>
-            <h4 class="main__informations--date-current">Fri, 5 Jun</h4>
+            <h4 class="aside__informations--date-current">Fri, 5 Jun</h4>
           </div>
-          <div class="main__informations--location">
-            <img class="main__informations--location-ico" src="./app/public/images/location.svg" alt="location-ico" />
-            <h4 class="main__informations--location-current">Helsinki</h4>
+          <div class="aside__informations--location">
+            <img
+              class="aside__informations--location-ico"
+              src="./app/public/images/location.svg"
+              alt="location-ico"
+            />
+            <h4 class="aside__informations--location-current">Helsinki</h4>
           </div>
         </div>
       </aside>
+      <main class="main__content">
+        <div class="main__content--cards">
+          <div class="main__content--cards-card">
+            <h5 class="card__title">Tommorow</h5>
+            <img
+              src="./app/public/images/Shower.png"
+              alt="shower"
+              class="card__image"
+            />
+            <div class="card__temps">
+              <p class="card__temps--day">16<span class="unit">C</span></p>
+              <p class="card__temps--night">15<span class="unit">C</span></p>
+            </div>
+          </div>
+          <div class="main__content--cards-card">
+            <h5 class="card__title">Tommorow</h5>
+            <img
+              src="./app/public/images/Shower.png"
+              alt="shower"
+              class="card__image"
+            />
+            <div class="card__temps">
+              <p class="card__temps--day">16<span class="unit">C</span></p>
+              <p class="card__temps--night">15<span class="unit">C</span></p>
+            </div>
+          </div>
+          <div class="main__content--cards-card">
+            <h5 class="card__title">Tommorow</h5>
+            <img
+              src="./app/public/images/Shower.png"
+              alt="shower"
+              class="card__image"
+            />
+            <div class="card__temps">
+              <p class="card__temps--day">16<span class="unit">C</span></p>
+              <p class="card__temps--night">15<span class="unit">C</span></p>
+            </div>
+          </div>
+          <div class="main__content--cards-card">
+            <h5 class="card__title">Tommorow</h5>
+            <img
+              src="./app/public/images/Shower.png"
+              alt="shower"
+              class="card__image"
+            />
+            <div class="card__temps">
+              <p class="card__temps--day">16<span class="unit">C</span></p>
+              <p class="card__temps--night">15<span class="unit">C</span></p>
+            </div>
+          </div>
+          <div class="main__content--cards-card">
+            <h5 class="card__title">Tommorow</h5>
+            <img
+              src="./app/public/images/Shower.png"
+              alt="shower"
+              class="card__image"
+            />
+            <div class="card__temps">
+              <p class="card__temps--day">16<span class="unit">C</span></p>
+              <p class="card__temps--night">15<span class="unit">C</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="main__content--highlights">
+          <h3 class="highlights__title">Today's Highlights</h3>
+
+          <div class="main__content--highlights-panels">
+            <div class="highlights__panels--panel wind">
+              <h5 class="panel__title">Wind status</h5>
+              <h2 class="panel__wind--value">7</h2>
+              <div class="panel__wind--direction">
+                <span class="panel__wind--direction-ico">
+                  <img
+                    src="./app/public/images/locationPointer-ico.svg"
+                    alt="location-pointer"
+                  />
+                </span>
+                <p class="panel__wind--direction-direction">WSW</p>
+              </div>
+            </div>
+            <div class="highlights__panels--panel humidity">
+              <h5 class="panel__title">Humidity</h5>
+              <h2 class="panel__humidity--value">84</h2>
+              <div class="panel__humidity--progress">
+                <span class="panel__humidity--progress-zero">0</span>
+                <progress
+                  class="panel__humidity--progress-bar"
+                  max="1"
+                  value="0.84"
+                  title=""
+                ></progress>
+              </div>
+            </div>
+            <div class="highlights__panels--panel visibility">
+              <h5 class="panel__title">Visibility</h5>
+              <h2 class="panel__visibility--value">6,4 km</h2>
+            </div>
+            <div class="highlights__panels--panel pressure">
+              <h5 class="panel__title">Air Pressure</h5>
+              <h2 class="panel__pressure--value">998 mb</h2>
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
     <script src="./app/public/js/index.min.js"></script>
   </body>

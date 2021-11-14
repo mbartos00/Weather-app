@@ -1,9 +1,11 @@
 @use '../variables' as *;
 @use 'sass:map';
-.main__content {
+
+.aside__content {
   min-height: 100vh;
   max-width: 100%;
   width: 100%;
+  padding-bottom: 6rem;
   color: $font-color-primary;
   background-color: $background-primary;
   background-image: url(/app/public/images/cloud_background.svg);
@@ -17,7 +19,7 @@
       background-position: 1000px 200px, 1200px 300px, 1100px 250px;
     }
   }
-  .main__informations {
+  .aside__informations {
     display: flex;
     justify-content: center;
     align-items: center;
