@@ -5,9 +5,10 @@
   flex-wrap: wrap;
   gap: 2rem;
   padding-bottom: 1.5rem;
+  max-width: 100%;
+  justify-content: center;
 }
 .highlights__panels--panel {
-  width: 100%;
   background-color: $background-primary;
   display: inherit;
   flex-direction: column;
@@ -19,6 +20,7 @@
   }
 
   &.wind {
+    padding: 2rem;
     .panel__wind--value {
       margin-bottom: 1.8rem;
       position: relative;
@@ -58,7 +60,7 @@
     }
   }
   &.humidity {
-    padding: 3rem;
+    padding: 2rem;
     .panel__humidity--value {
       margin-bottom: 1.5rem;
       position: relative;
@@ -107,13 +109,36 @@
           font-size: 0.9rem;
         }
       }
+      &-bar {
+        background: $font-color-primary;
+      }
+
       &-bar[value]::-webkit-progress-bar {
         border-radius: 20px;
         background-color: $font-color-primary;
       }
+      &-bar::-moz-progress-bar {
+        border-radius: 20px;
+        background-color: #ffec65;
+      }
+
       &-bar[value]::-webkit-progress-value {
         border-radius: 20px;
         background-color: #ffec65;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main__content--highlights-panels {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .highlights__panels--panel {
+    width: 32%;
+    &.humidity {
+      .panel__title {
+        margin-top: -1.3rem;
       }
     }
   }

@@ -2,10 +2,9 @@
 @use 'sass:map';
 
 .aside__content {
-  min-height: 100vh;
+  padding-bottom: 3rem;
   max-width: 100%;
   width: 100%;
-  padding-bottom: 6rem;
   color: $font-color-primary;
   background-color: $background-primary;
   background-image: url(/app/public/images/cloud_background.svg);
@@ -13,10 +12,10 @@
   animation: wind 20s infinite linear;
   @keyframes wind {
     0% {
-      background-position: 0 200px, 0 300px, 100px 250px;
+      background-position: -515px 200px, -300px 300px, -200px 250px;
     }
     100% {
-      background-position: 1000px 200px, 1200px 300px, 1100px 250px;
+      background-position: 1200px 200px, 1300px 300px, 1250px 250px;
     }
   }
   .aside__informations {
@@ -89,6 +88,25 @@
       }
       &-current {
         color: $font-color-darker;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .aside__content {
+    width: 30%;
+    min-height: 100vh;
+    position: relative;
+
+    .aside__informations {
+      &--date {
+        position: absolute;
+        bottom: 10%;
+      }
+      &--location {
+        position: absolute;
+        bottom: 5%;
       }
     }
   }
