@@ -14,6 +14,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
   padding: 2rem 0;
   .panel__title {
     margin-bottom: 1rem;
@@ -79,6 +80,22 @@
       justify-content: center;
       align-items: center;
       position: relative;
+      &::before {
+        content: '100';
+        right: 0;
+        bottom: 140%;
+        position: absolute;
+        font-size: 0.9rem;
+        color: $font-color-accent;
+      }
+      &::after {
+        content: '%';
+        position: absolute;
+        top: 140%;
+        color: $font-color-accent;
+        right: 0;
+        font-size: 0.9rem;
+      }
       &-zero {
         position: absolute;
         font-size: 0.9rem;
@@ -92,22 +109,6 @@
         background-color: #ffec65;
         border-radius: 20px;
         position: relative;
-        &::before {
-          content: '100';
-          right: 0;
-          bottom: 140%;
-          position: absolute;
-          font-size: 0.9rem;
-          color: $font-color-accent;
-        }
-        &::after {
-          content: '%';
-          position: absolute;
-          top: 140%;
-          color: $font-color-accent;
-          right: 0;
-          font-size: 0.9rem;
-        }
       }
       &-bar {
         background: $font-color-primary;
