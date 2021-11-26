@@ -14,7 +14,7 @@
 
 ## Overview
 
-![screenshot](https://github.com/mbartos00/Weather-app/app/public/images/screenshot.png)
+![screenshot](https://mbartos00.github.io/Weather-app/app/public/images/screenshot.png)
 
 ### Technologies that i've used
 
