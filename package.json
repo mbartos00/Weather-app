@@ -8,17 +8,15 @@
     "uglify": "uglifyjs app/build/js/index.js -o app/public/js/index.min.js -c -m",
     "prefix": "npx postcss app/public/css/*.min.css --use autoprefixer -r",
     "sass": "npx sass app/build/scss/style.scss app/public/css/style.min.css --style=compressed --watch",
-    "server": "live-server --port=8000 -q",
-    "dev": "concurrently  \" npm run sass \" \" npm run server  \" ",
-    "build": "npm run prefix && npm run lint && npm run uglify"
+    "start": "live-server --port=8000 -q",
+    "dev": "concurrently  \" npm run sass \" \" npm run start  \" ",
+    "build": "concurrently \" npm run prefix \" \" npm run lint \" npm run uglify \""
   },
   "keywords": [],
   "author": "github.com/mbartos00",
   "license": "ISC",
   "dependencies": {
     "autoprefixer": "^10.3.7",
-    "axios": "^0.23.0",
-    "dotenv": "^10.0.0",
     "live-server": "^1.2.1",
     "postcss": "^8.3.11",
     "postcss-cli": "^9.0.1",
