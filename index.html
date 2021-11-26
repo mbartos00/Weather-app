@@ -12,7 +12,11 @@
       <aside class="aside__content">
         <header class="aside__header">
           <nav class="header__nav">
-            <div class="header__nav--btn-close" aria-label="close-btn">
+            <div
+              id="closeNavBtn"
+              class="header__nav--btn-close"
+              aria-label="close-btn"
+            >
               <div class="header__nav--btn-close-line"></div>
             </div>
             <div class="header__nav--searchbar-container">
@@ -25,38 +29,57 @@
                 type="text"
                 aria-label="searchbar"
                 placeholder="search location"
+                id="searchBar"
                 class="header__nav--searchbar-container--input"
               />
-              <button class="header__nav--searchbar-container--btn">
+              <button
+                id="searchBtn"
+                class="header__nav--searchbar-container--btn"
+              >
                 Search
               </button>
             </div>
-            <div class="header__nav--recent-cities">
+            <div class="header__nav--recent-cities" id="recentCities">
               <p class="header__nav--recent-cities-title">Recently Searched</p>
-              <button class="header__nav--recent-cities-city">London</button>
             </div>
           </nav>
           <div class="header__btns">
-            <button class="header__btns--btn-search">Search for places</button>
-            <button class="header__btns--btn-location">
+            <button id="openNavBtn" class="header__btns--btn-search">
+              Search for places
+            </button>
+            <button id="locationBtn" class="header__btns--btn-location">
               <img src="./app/public/images/gps.svg" alt="gps-ico" />
             </button>
           </div>
         </header>
         <div class="aside__informations">
           <div class="aside__informations--image-container">
-            <img src="./app/public/images/Shower.png" alt="shower-ico" />
+            <img
+              id="asideImage"
+              src="./app/public/images/Shower.png"
+              alt="shower-ico"
+            />
           </div>
           <div class="aside__informations--temp-container">
-            <h1 class="aside__informations--temp-container-temperature">
-              15<span class="unit">C</span>
+            <h1
+              id="asideTemperature"
+              class="aside__informations--temp-container-temperature"
+            >
+              15
             </h1>
-            <h3 class="aside__informations--temp-container-type">Shower</h3>
+            <h3
+              id="asideWeatherType"
+              class="aside__informations--temp-container-type"
+            >
+              Shower
+            </h3>
           </div>
           <div class="aside__informations--date">
             <h4 class="aside__informations--date-today">Today</h4>
             <span class="dot"></span>
-            <h4 class="aside__informations--date-current">Fri, 5 Jun</h4>
+            <h4 id="currentDate" class="aside__informations--date-current">
+              Fri, 5 Jun
+            </h4>
           </div>
           <div class="aside__informations--location">
             <img
@@ -64,87 +87,17 @@
               src="./app/public/images/location.svg"
               alt="location-ico"
             />
-            <h4 class="aside__informations--location-current">Helsinki</h4>
+            <h4
+              id="currentLocation"
+              class="aside__informations--location-current"
+            >
+              Helsinki
+            </h4>
           </div>
         </div>
       </aside>
       <main class="main__content">
-        <div class="main__content--unit-btns">
-          <button
-            class="main__content--unit-btns__btn celsius active"
-            aria-label="celsius"
-          >
-            C
-          </button>
-          <button
-            class="main__content--unit-btns__btn fahrenheit"
-            aria-label="fahrenheit"
-          >
-            F
-          </button>
-        </div>
-        <div class="main__content--cards">
-          <div class="main__content--cards-card">
-            <h5 class="card__title">Tommorow</h5>
-            <img
-              src="./app/public/images/Shower.png"
-              alt="shower"
-              class="card__image"
-            />
-            <div class="card__temps">
-              <p class="card__temps--day">16<span class="unit">C</span></p>
-              <p class="card__temps--night">15<span class="unit">C</span></p>
-            </div>
-          </div>
-          <div class="main__content--cards-card">
-            <h5 class="card__title">Tommorow</h5>
-            <img
-              src="./app/public/images/Shower.png"
-              alt="shower"
-              class="card__image"
-            />
-            <div class="card__temps">
-              <p class="card__temps--day">16<span class="unit">C</span></p>
-              <p class="card__temps--night">15<span class="unit">C</span></p>
-            </div>
-          </div>
-          <div class="main__content--cards-card">
-            <h5 class="card__title">Tommorow</h5>
-            <img
-              src="./app/public/images/Shower.png"
-              alt="shower"
-              class="card__image"
-            />
-            <div class="card__temps">
-              <p class="card__temps--day">16<span class="unit">C</span></p>
-              <p class="card__temps--night">15<span class="unit">C</span></p>
-            </div>
-          </div>
-          <div class="main__content--cards-card">
-            <h5 class="card__title">Tommorow</h5>
-            <img
-              src="./app/public/images/Shower.png"
-              alt="shower"
-              class="card__image"
-            />
-            <div class="card__temps">
-              <p class="card__temps--day">16<span class="unit">C</span></p>
-              <p class="card__temps--night">15<span class="unit">C</span></p>
-            </div>
-          </div>
-          <div class="main__content--cards-card">
-            <h5 class="card__title">Tommorow</h5>
-            <img
-              src="./app/public/images/Shower.png"
-              alt="shower"
-              class="card__image"
-            />
-            <div class="card__temps">
-              <p class="card__temps--day">16<span class="unit">C</span></p>
-              <p class="card__temps--night">15<span class="unit">C</span></p>
-            </div>
-          </div>
-        </div>
+        <div class="main__content--cards"></div>
         <div class="main__content--highlights">
           <h3 class="highlights__title">Today's Highlights</h3>
 
@@ -187,6 +140,8 @@
         </div>
       </main>
     </div>
-    <script src="./app/public/js/index.min.js"></script>
+    <!-- <script src="./app/public/js/index.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="./app/build/js/index.js"></script>
   </body>
 </html>
