@@ -31,23 +31,22 @@
       justify-content: center;
       margin-top: 5rem;
       width: 100%;
+      img {
+        width: 16rem;
+      }
     }
 
     &--temp-container {
       &-temperature {
         position: relative;
-        .unit {
+        &::after {
+          content: '\00B0 C';
           position: absolute;
-          top: 50%;
-          left: 110%;
-          font-size: map-get($font-size, l);
-          color: $font-color-accent;
-          font-weight: map.get($font-weight, medium);
-        }
-        ::before {
-          content: '\00B0';
-          position: absolute;
-          right: 100%;
+          left: 100%;
+          top: calc(50% - 5px);
+          color: $font-color-darker;
+          font-size: 4rem;
+          font-weight: map-get($font-weight, medium);
         }
       }
       &-type {
@@ -100,6 +99,12 @@
     position: relative;
 
     .aside__informations {
+      &--temp-container {
+        margin-top: 2rem;
+        &-temperature {
+          margin-bottom: 2rem;
+        }
+      }
       &--date {
         position: absolute;
         bottom: 10%;

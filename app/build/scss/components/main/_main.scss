@@ -10,9 +10,7 @@
   max-width: 100%;
   width: 100%;
   color: $font-color-primary;
-  &--unit-btns {
-    display: none;
-  }
+
   &--cards {
     display: inherit;
     flex-direction: row;
@@ -41,41 +39,7 @@
   .main__content {
     width: 70%;
     position: relative;
-    &--unit-btns {
-      display: flex;
-      width: calc(100% - 7rem);
-      flex-direction: column;
-      position: absolute;
-      top: 2.6rem;
-      right: 5%;
-      max-width: 100%;
-      justify-content: flex-end;
-      align-items: flex-end;
-      gap: 2rem;
-      &__btn {
-        border: none;
-        border-radius: 100vh;
-        width: 2.2rem;
-        aspect-ratio: 1;
-        font-size: map-get($font-size, s);
-        font-weight: map-get($font-weight, medium);
-        position: relative;
-        background-color: #585676;
-        color: $font-color-primary;
 
-        &::before {
-          content: '\00B0';
-          font-size: 1.5rem;
-          position: absolute;
-          top: 17%;
-          left: 17%;
-        }
-      }
-      .active {
-        background-color: $font-color-primary;
-        color: #000;
-      }
-    }
     &--highlights {
       flex-direction: column;
       .highlights__title {
@@ -85,7 +49,7 @@
     }
 
     &--cards {
-      margin-inline: clamp(0rem, 5rem, 7rem);
+      gap: 2.5rem;
     }
   }
 }

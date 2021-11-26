@@ -23,36 +23,21 @@
     gap: 2rem;
     &--day {
       position: relative;
-      .unit {
+
+      &::before {
+        content: '\00B0 C';
         position: absolute;
-        left: 140%;
-        top: 0;
-        font-size: map-get($font-size, s);
-        color: $font-color-primary;
-        font-weight: map.get($font-weight, regular);
-      }
-      ::before {
-        content: '\00B0';
-        position: absolute;
-        right: 100%;
+        left: 100%;
       }
     }
     &--night {
       position: relative;
       color: $font-color-darker;
 
-      .unit {
+      &::before {
+        content: '\00B0 C';
         position: absolute;
-        left: 140%;
-        top: 0;
-        font-size: map-get($font-size, s);
-        color: $font-color-darker;
-        font-weight: map.get($font-weight, regular);
-      }
-      ::before {
-        content: '\00B0';
-        position: absolute;
-        right: 100%;
+        left: 100%;
       }
     }
   }
@@ -60,8 +45,13 @@
 
 @media screen and (min-width: 1024px) {
   .main__content--cards-card {
+    padding: 1.5rem 1.7rem;
+    .card__image {
+      width: 4.5rem;
+    }
     .card__temps {
       margin-top: 1rem;
+      margin-bottom: -0.5rem;
       gap: 3rem;
     }
   }
