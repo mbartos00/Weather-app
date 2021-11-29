@@ -35,21 +35,31 @@
     }
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1120px) {
   .main__content {
     width: 70%;
     position: relative;
+    padding-bottom: 1.2rem;
+    &--cards {
+      width: 100%;
+      padding-top: 2rem;
+      gap: 2rem;
+    }
 
     &--highlights {
       flex-direction: column;
+
       .highlights__title {
         transform: translateX(13.55rem);
         width: fit-content;
       }
     }
-
+  }
+}
+@media screen and (min-width: 1440px) {
+  .main__content {
     &--cards {
-      gap: 2.5rem;
+      padding-top: 3.2rem;
     }
   }
 }

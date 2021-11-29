@@ -5,6 +5,7 @@
   padding-bottom: 3rem;
   max-width: 100%;
   width: 100%;
+
   color: $font-color-primary;
   background-color: $background-primary;
   background-image: url(../images/cloud_background.svg);
@@ -92,17 +93,22 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1120px) {
   .aside__content {
-    width: 30%;
+    max-width: 30%;
     min-height: 100vh;
     position: relative;
-
+    padding-bottom: 3.55rem;
     .aside__informations {
       &--temp-container {
         margin-top: 2rem;
         &-temperature {
           margin-bottom: 2rem;
+        }
+      }
+      &--image-container {
+        img {
+          width: 15rem;
         }
       }
       &--date {

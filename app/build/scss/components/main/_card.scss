@@ -8,12 +8,13 @@
   align-items: center;
   background-color: $background-primary;
   padding: 1.125rem 1.4rem;
-
+  width: 38%;
   .card__title {
     margin-bottom: 0.675rem;
   }
   .card__image {
-    width: 4rem;
+    width: 4.2rem;
+    height: 4.5rem;
   }
   .card__temps {
     display: inherit;
@@ -43,12 +44,24 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1120px) {
   .main__content--cards-card {
-    padding: 1.5rem 1.7rem;
+    width: 15%;
+    padding-bottom: 1.5rem;
     .card__image {
-      width: 4.5rem;
+      width: 4.5vw;
+      height: 4.7vw;
     }
+    .card__temps {
+      margin-top: 1rem;
+      margin-bottom: -0.5rem;
+      gap: 3rem;
+    }
+  }
+}
+@media screen and (min-width: 1440px) {
+  .main__content--cards-card {
+    width: 11%;
     .card__temps {
       margin-top: 1rem;
       margin-bottom: -0.5rem;

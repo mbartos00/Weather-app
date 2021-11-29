@@ -104,7 +104,7 @@ const setHighlightsValues = (currentData) => {
   progressBar.setAttribute('title', `${currentData.humidity}%`);
 
   const visibility = document.querySelector('.panel__visibility--value');
-  visibility.innerText = `${currentData.visibility / 1000}km`;
+  visibility.innerText = `${(currentData.visibility / 1000).toFixed(1)}km`;
 
   const pressure = document.querySelector('.panel__pressure--value');
   pressure.innerText = `${currentData.pressure}hPa`;

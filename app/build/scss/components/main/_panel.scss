@@ -130,13 +130,35 @@
     }
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1120px) {
+  .main__content--highlights-panels {
+    width: 100%;
+    margin-top: 0.275rem;
+  }
+  .highlights__panels--panel {
+    width: 40%;
+    &.wind {
+      padding-bottom: 1rem;
+      padding-top: 1rem;
+    }
+    &.humidity {
+      padding-bottom: 1rem;
+      padding-top: 1rem;
+
+      .panel__title {
+        margin-top: -1.3rem;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1440px) {
   .main__content--highlights-panels {
     width: 100%;
     margin-top: 1rem;
   }
   .highlights__panels--panel {
     width: 32%;
+
     &.humidity {
       .panel__title {
         margin-top: -1.3rem;
