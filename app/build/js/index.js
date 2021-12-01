@@ -139,15 +139,15 @@ const iconFilter = (weatherIcon) => {
   const path = './app/public/images/';
 
   const icons = {
-    clear: `${path}Clear.png`,
-    brokenClouds: `${path}BrokenClouds.png`,
-    heavyCloud: `${path}HeavyCloud.png`,
-    heavyRain: `${path}HeavyRain.png`,
-    lightCloud: `${path}LightCloud.png`,
-    mist: `${path}Mist.png`,
-    shower: `${path}Shower.png`,
-    snow: `${path}Snow.png`,
-    thunderstorm: `${path}Thunderstorm.png`,
+    clear: `${path}Clear.svg`,
+    brokenClouds: `${path}BrokenClouds.svg`,
+    heavyCloud: `${path}HeavyCloud.svg`,
+    heavyRain: `${path}HeavyRain.svg`,
+    lightCloud: `${path}LightCloud.svg`,
+    mist: `${path}Mist.svg`,
+    shower: `${path}Shower.svg`,
+    snow: `${path}Snow.svg`,
+    thunderstorm: `${path}Thunderstorm.svg`,
   };
   switch (weatherIcon) {
     case '01d':
