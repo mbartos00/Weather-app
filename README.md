@@ -56,5 +56,4 @@ $ npm run start
 
 ## Contact
 
-- Website [Weather App](https://mbartos00.github.io/Weather-app/)
 - GitHub [@mbartos00](https://https://github.com/mbartos00)
