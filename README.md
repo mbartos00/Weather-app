@@ -7,21 +7,19 @@
 ## Table of Contents
 
 - [Overview](#overview)
-  - [Built With](#technologies-that-ive-used)
+- [Built With](#technologies-that-ive-used)
 - [Features](#features)
 - [How to use](#how-to-use)
 - [Contact](#contact)
 
 ## Overview
 
-![screenshot](https://mbartos00.github.io/Weather-app/app/public/images/screenshot.png)
+![screenshot.png](https://postimg.cc/0bgnv9SK)
 
 ### Technologies that i've used
 
-- Html
-- JavaScript
-- [Sass](https://sass-lang.com)
-- [Axios](https://github.com/axios/axios)
+- [React]
+- [Styled-components]
 
 ## Features
 
@@ -37,7 +35,6 @@
 - [x] User story: I can see humidity percentage
 - [x] User story: I can see a visibility indicator
 - [x] User story: I can see the air pressure number
-- [x] User story (optional): I can request my current location weather
 
 ## How To Use
 
@@ -51,7 +48,7 @@ $ git clone https://github.com/mbartos00/Weather-app
 $ npm install
 
 # Run the app
-$ npm run start
+$ npm run dev
 ```
 
 ## Contact
