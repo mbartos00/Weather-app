@@ -37,6 +37,7 @@ body {
   min-height: 100vh;
   max-width: 100%;
   width: 100%;
+  background-color: #100e1d;
 }
 h1 {
   font-size: 9rem;
@@ -61,4 +62,16 @@ h4 {
 h5 {
   font-size: 1rem;
   font-weight: 500;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+@media screen and (min-width: 1120px) {
+  .App {
+    flex-direction: row;
+  }
 }
