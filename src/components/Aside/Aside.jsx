@@ -30,11 +30,14 @@ const StyledAside = styled.aside`
   }
 `;
 
-const Aside = () => {
+const Aside = ({ data, setNewData, error }) => {
   return (
     <StyledAside>
-      <AsideHeader />
-      <AsideContent />
+      <AsideHeader
+        setNewData={setNewData}
+        error={error}
+      />
+      <AsideContent data={data} />
     </StyledAside>
   );
 };

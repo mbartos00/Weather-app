@@ -8,30 +8,34 @@ const StyledContainer = styled.div`
 `;
 
 const StyledText = styled.h1`
-position: relative;
-        &::after {
-          content: '\00B0 C';
-          position: absolute;
-          left: 100%;
-          top: calc(50% - 5px);
-          color: #88869d;
-          font-size: 4rem;
-          font-weight: 600;
-          @media screen and (min-width: 1120px) {
-            margin-bottom: 2rem;
-          }
-        }
+  position: relative;
+
+  &:after {
+    content: '\\00B0 C';
+    position: absolute;
+    left: 100%;
+    top: calc(50% - 5px);
+    color: #88869d;
+    font-size: 4rem;
+    font-weight: 600;
+    @media screen and (min-width: 1120px) {
+      margin-bottom: 2rem;
+    }
+  }
 `;
 const StyledWeatherType = styled.h3`
-  color: $font-color-accent;
+  color: #88869d;
   margin-top: 1.2rem;
   margin-bottom: 3rem;
 `;
-const AsideTemp = () => {
+const AsideTemp = ({ data }) => {
+  const { temp } = data.current;
+
+  const { main: weather } = data.current.weather[0];
   return (
     <StyledContainer>
-      <StyledText>15</StyledText>
-      <StyledWeatherType>Shower</StyledWeatherType>
+      <StyledText>{Math.round(temp).toFixed(0)}</StyledText>
+      <StyledWeatherType>{weather}</StyledWeatherType>
     </StyledContainer>
   );
 };

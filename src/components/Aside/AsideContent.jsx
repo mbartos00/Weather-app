@@ -14,13 +14,13 @@ const StyledContainer = styled.div`
   text-align: center;
 `;
 
-const AsideContent = () => {
+const AsideContent = ({ data }) => {
   return (
     <StyledContainer>
-      <AsideImage />
-      <AsideTemp />
-      <AsideDate />
-      <AsideLocation />
+      <AsideImage data={data} />
+      <AsideTemp data={data} />
+      <AsideDate data={data} />
+      <AsideLocation data={data} />
     </StyledContainer>
   );
 };

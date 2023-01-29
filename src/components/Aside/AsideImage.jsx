@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import showerImg from '../../assets/Shower.svg';
+import iconFilter from '../utils/iconFilter';
 
 const StyledImageContainer = styled.div`
   display: flex;
@@ -16,11 +16,12 @@ const StyledImage = styled.img`
   }
 `;
 
-const AsideImage = () => {
+const AsideImage = ({ data }) => {
+  const icon = iconFilter(data.current.weather[0].icon);
   return (
     <StyledImageContainer>
       <StyledImage
-        src={showerImg}
+        src={icon}
         alt='shower-ico'
       />
     </StyledImageContainer>

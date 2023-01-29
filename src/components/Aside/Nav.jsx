@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import RecentCities from './RecentCities';
 import SearchBar from './SearchBar';
@@ -51,7 +51,7 @@ const StyledCloseBtn = styled.div`
   }
 `;
 
-const Nav = ({ isOpen, setIsOpen }) => {
+const Nav = ({ isOpen, setIsOpen, setNewData }) => {
   const handleCloseNavClick = () => {
     setIsOpen(false);
   };
@@ -64,7 +64,10 @@ const Nav = ({ isOpen, setIsOpen }) => {
       >
         <span></span>
       </StyledCloseBtn>
-      <SearchBar />
+      <SearchBar
+        setNewData={setNewData}
+        onClick={handleCloseNavClick}
+      />
       <RecentCities />
     </StyledNav>
   );

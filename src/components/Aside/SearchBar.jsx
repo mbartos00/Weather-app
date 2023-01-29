@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-
 import searchIcon from '../../assets/search-ico.png';
 
 const StyledSearchBar = styled.form`
@@ -43,11 +42,57 @@ const StyledButton = styled.button`
   border: none;
 `;
 
-const handleSubmit = e => {
-  e.preventDefault();
-};
+const SearchBar = ({ setNewData, onClick }) => {
+  const [input, setInput] = useState('');
+  const [recentCities, setRecentCities] = useState(getCities);
 
-const SearchBar = () => {
+  function getCities() {
+    const cities = JSON.parse(localStorage.getItem('cities'));
+    if (cities) {
+      return cities;
+    } else {
+      return [];
+    }
+  }
+
+  const getWeatherByCity = async query => {
+    try {
+      const response = await fetch(
+        `https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${
+          import.meta.env.VITE_API_KEY
+        }`
+      );
+      const data = await response.json();
+      const { coord } = data;
+      return coord;
+    } catch (error) {
+      throw new Error(error);
+    }
+  };
+
+  const handleSubmit = async e => {
+    e.preventDefault();
+    const data = getWeatherByCity(input);
+    onClick();
+    if (!recentCities.includes(input)) {
+      setRecentCities(prev => [...prev, input]);
+    }
+    setNewData(data);
+  };
+  const handleChange = e => {
+    setInput(e.target.value);
+  };
+  useEffect(() => {
+    if (input.length !== 0) {
+      localStorage.setItem('cities', JSON.stringify(recentCities));
+    }
+    if (JSON.parse(localStorage.getItem('cities'))?.length > 5) {
+      const newCities = recentCities;
+      newCities.shift();
+      localStorage.setItem('cities', JSON.stringify(newCities));
+    }
+    setInput('');
+  }, [recentCities]);
   return (
     <StyledSearchBar onSubmit={handleSubmit}>
       <StyledIco
@@ -58,6 +103,8 @@ const SearchBar = () => {
         type='text'
         aria-label='searchbar'
         placeholder='search location'
+        value={input}
+        onChange={handleChange}
       />
       <StyledButton>Search</StyledButton>
     </StyledSearchBar>

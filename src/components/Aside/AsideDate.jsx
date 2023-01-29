@@ -22,11 +22,12 @@ const StyledDot = styled.span`
 `;
 
 const AsideDate = () => {
+  const date = new Date().toString().split(' ').slice(0, 3).join(' ');
   return (
     <StyledDate>
       <StyledTitle>Today</StyledTitle>
       <StyledDot></StyledDot>
-      <StyledText>Fri, 5 Jun</StyledText>
+      <StyledText>{date}</StyledText>
     </StyledDate>
   );
 };
