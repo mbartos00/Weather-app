@@ -18,8 +18,8 @@
 
 ### Technologies that i've used
 
-- [React]
-- [Styled-components]
+- [React](https://pl.reactjs.org)
+- [Styled-components](https://styled-components.com)
 
 ## Features
 
