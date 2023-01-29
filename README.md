@@ -14,7 +14,7 @@
 
 ## Overview
 
-![screenshot.png](https://postimg.cc/0bgnv9SK)
+![screenshot.png](https://i.postimg.cc/qMq58RMw/screenshot.png)
 
 ### Technologies that i've used
 
